@@ -1,24 +1,15 @@
-# Base image (OS)
-
+#to download the base image
 FROM python:3.9-slim
 
-
-# Working directory
-
+# create a working directoty 
 WORKDIR /app
 
-# Copy src code to container
-
+#copy everythink 
 COPY . .
 
-# Run the build commands
-
+#run the command
 RUN pip install -r requirement.txt
 
-# expose port 80
-
-EXPOSE 80
-
-# serve the app / run the app (keep it running)
-
+#to run the file
 CMD ["python","run.py"]
+
