@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  flask:
+   build:
+    context: .
+   container_name: python-app   
+   ports:
+    - "80:80"
+   restart: always
+     
